@@ -7,8 +7,8 @@
 <body>
     <h1>Imagmager</h1>
     <?php
-        $scan = scandir('uploads');
-        foreach ($scan as $title) {
+        $scan = scandir('./uploads');
+        foreach ($scan as $file) {
             if(!is_dir($file)){
                 echo '<h3>'.$tfile.'</h3>';
                 echo '<img src="uploads/'.$file.'" style="width: 400px;"/><br/>';
