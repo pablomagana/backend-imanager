@@ -3,8 +3,7 @@ header('Access-Control-Allow-Origin: *');
 $target_path = 'uploads/';
 
 $target_path = $target_path.basename($_FILES['file']['name']);
-$data= array();
-echo $target_path;
+$data=[];
 if(move_uploaded_file($_FILES['file']['tmp_name'], $target_path)){
     header('Content-type: application/json');
     $data = ['success' => true, 'message'=> 'Imagen subida correctamente'];
